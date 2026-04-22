@@ -23,9 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full`}
+      // 🔥 FORCE LIGHT MODE HERE
+      className={`${geistSans.variable} ${geistMono.variable} h-full light`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-white text-black">
 
         <AuthProvider>
 

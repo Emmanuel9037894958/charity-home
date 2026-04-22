@@ -1,6 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* 🔥 FORCE LIGHT MODE */
+html {
+  color-scheme: light;
+}
+
+/* OPTIONAL: Ensure clean background */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* EMBLA STYLES */
 .embla__viewport {
   overflow: hidden;
 }
