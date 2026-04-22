@@ -21,7 +21,6 @@ export default function Navbar() {
     location.reload();
   };
 
-  // ❌ BLOG REMOVED HERE
   const navItems = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
@@ -32,7 +31,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-green-900 text-white px-4 py-3 flex justify-between items-center z-50 shadow-md">
+    <nav className="fixed md:top-0 left-0 w-full bg-green-900 text-white px-4 py-3 flex justify-between items-center z-50 shadow-xl h-20 shadow-black-900/50">
 
       {/* LOGO */}
       <Link href="/" className="flex items-center gap-3">
@@ -41,7 +40,7 @@ export default function Navbar() {
           alt="logo"
           width={45}
           height={45}
-          className="rounded-full"
+          className="rounded-full h-15 w-15"
         />
         <h1 className="font-bold text-sm md:text-lg">
           ROODEL TRUST FOUNDATION
@@ -102,92 +101,141 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ duration: 0.4 }}
-            className="fixed top-0 right-0 w-[85%] h-full bg-white text-black p-6 z-50 shadow-lg flex flex-col"
-          >
+          <>
+            {/* BACKDROP */}
+            <div
+              onClick={() => setOpen(false)}
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
+            />
 
-            {/* TOP */}
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="font-bold text-lg text-green-900">Menu</h2>
-              <button onClick={() => setOpen(false)}>✕</button>
-            </div>
+            {/* SIDEBAR */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.4 }}
+              className="fixed top-0 right-0 w-[85%] h-full bg-white text-black p-6 z-50 shadow-lg flex flex-col"
+            >
 
-            {/* USER */}
-            {user && (
-              <div className="flex items-center gap-3 mb-6 border-b pb-4">
-                <img
-                  src={user.photoURL || "/default-avatar.png"}
-                  className="w-10 h-10 rounded-full"
-                />
-                <span className="font-semibold">
-                  {user.displayName || "User"}
-                </span>
+              {/* TOP */}
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="font-bold text-lg text-green-900">Menu</h2>
+                <button onClick={() => setOpen(false)}>✕</button>
               </div>
-            )}
 
-            {/* LINKS */}
-            <ul className="space-y-6 text-lg">
-
-              <li><Link href="/" onClick={() => setOpen(false)}>Home</Link></li>
-              <li><Link href="/about" onClick={() => setOpen(false)}>About</Link></li>
-
-              <li>
-                <div
-                  onClick={() =>
-                    setDropdown(dropdown === "what" ? null : "what")
-                  }
-                  className="flex justify-between cursor-pointer font-semibold"
-                >
-                  What We Do <span>⌄</span>
+              {/* USER */}
+              {user && (
+                <div className="flex items-center gap-3 mb-6 border-b pb-4">
+                  <img
+                    src={user.photoURL || "/default-avatar.png"}
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <span className="font-semibold">
+                    {user.displayName || "User"}
+                  </span>
                 </div>
+              )}
 
-                {dropdown === "what" && (
-                  <ul className="ml-4 mt-2 space-y-2 text-gray-600">
-                    <li><Link href="/programs#education">Education</Link></li>
-                    <li><Link href="/programs#health">Health</Link></li>
-                    <li><Link href="/programs#enterprise">Social Enterprise</Link></li>
-                  </ul>
-                )}
-              </li>
+              {/* LINKS */}
+              <ul className="space-y-6 text-lg">
 
-              <li>
-                <div
-                  onClick={() =>
-                    setDropdown(dropdown === "opp" ? null : "opp")
-                  }
-                  className="flex justify-between cursor-pointer font-semibold"
+                <li>
+                  <Link href="/" onClick={() => setOpen(false)}>
+                    Home
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/about" onClick={() => setOpen(false)}>
+                    About
+                  </Link>
+                </li>
+
+                {/* WHAT WE DO */}
+                <li>
+                  <div
+                    onClick={() =>
+                      setDropdown(dropdown === "what" ? null : "what")
+                    }
+                    className="flex justify-between cursor-pointer font-semibold"
+                  >
+                    What We Do <span>⌄</span>
+                  </div>
+
+                  {dropdown === "what" && (
+                    <ul className="ml-4 mt-2 space-y-2 text-gray-600">
+                      <li>
+                        <Link href="/programs#education" onClick={() => setOpen(false)}>
+                          Education
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/programs#health" onClick={() => setOpen(false)}>
+                          Health
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/programs#enterprise" onClick={() => setOpen(false)}>
+                          Social Enterprise
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+
+                {/* OPPORTUNITIES */}
+                <li>
+                  <div
+                    onClick={() =>
+                      setDropdown(dropdown === "opp" ? null : "opp")
+                    }
+                    className="flex justify-between cursor-pointer font-semibold"
+                  >
+                    Opportunities <span>⌄</span>
+                  </div>
+
+                  {dropdown === "opp" && (
+                    <ul className="ml-4 mt-2 space-y-2 text-gray-600">
+                      <li>
+                        <Link href="/volunteer" onClick={() => setOpen(false)}>
+                          Volunteering
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/donate" onClick={() => setOpen(false)}>
+                          Donate
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+
+                <li>
+                  <Link href="/projects" onClick={() => setOpen(false)}>
+                    Projects
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/contact" onClick={() => setOpen(false)}>
+                    Contact
+                  </Link>
+                </li>
+
+              </ul>
+
+              {/* LOGOUT */}
+              {user && (
+                <button
+                  onClick={handleLogout}
+                  className="mt-auto bg-red-500 text-white py-3 rounded-lg"
                 >
-                  Opportunities <span>⌄</span>
-                </div>
+                  Logout
+                </button>
+              )}
 
-                {dropdown === "opp" && (
-                  <ul className="ml-4 mt-2 space-y-2 text-gray-600">
-                    <li><Link href="/volunteer">Volunteering</Link></li>
-                    <li><Link href="/donate">Donate</Link></li>
-                  </ul>
-                )}
-              </li>
-
-              <li><Link href="/projects">Projects</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-
-            </ul>
-
-            {/* LOGOUT */}
-            {user && (
-              <button
-                onClick={handleLogout}
-                className="mt-auto bg-red-500 text-white py-3 rounded-lg"
-              >
-                Logout
-              </button>
-            )}
-
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
 
