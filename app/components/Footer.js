@@ -11,13 +11,15 @@ export default function Footer() {
         {/* LOGO + BRAND */}
         <div>
           <div className="flex items-center gap-3">
-            <Image
+        <Link href="/">
+        <Image
               src="/logo.png"
               alt="Roodel Trust Foundation Logo"
               width={50}
               height={50}
-              className="rounded-full h-15 w-15"
+              className="rounded-full h-15 w-20"
             />
+        </Link >
 
             <h2 className="text-lg font-bold leading-tight">
               ROODEL TRUST FOUNDATION
@@ -69,7 +71,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-gray-300 text-sm">
             <li className="hover:text-yellow-400 transition">Email: info@roodeltrust.org</li>
             <li className="hover:text-yellow-400 transition">Phone: +44 123 456 7890</li>
-            <li className="hover:text-yellow-400 transition">Location: UK & Global Outreach</li>
+            <li className="hover:text-yellow-400 transition">Address: 5 Brayford square LONDON E1 0SG</li>
           </ul>
         </div>
 

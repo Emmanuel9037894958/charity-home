@@ -5,33 +5,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-// AUTH
-import useAuth from "../hooks/useAuth";
-import { signOut } from "firebase/auth";
-import { auth } from "../../lib/firebase";
-
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [dropdown, setDropdown] = useState(null);
-
-  const user = useAuth();
-
-  const handleLogout = async () => {
-    await signOut(auth);
-    location.reload();
-  };
 
   const navItems = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Programs", link: "/programs" },
+    { name: "Projects", link: "/projects" },
     { name: "Impact", link: "/impact" },
     { name: "Gallery", link: "/gallery" },
     { name: "Contact", link: "/contact" },
   ];
 
   return (
-    <nav className="fixed md:top-0 left-0 w-full bg-green-900 text-white px-4 py-3 flex justify-between items-center z-50 shadow-xl h-20 shadow-black-900/50">
+    <nav className="fixed top-0 left-0 w-full bg-green-900 text-white px-4 py-5 md:py-3 flex justify-between items-center z-50 shadow-xl h-20">
 
       {/* LOGO */}
       <Link href="/" className="flex items-center gap-3">
@@ -63,36 +52,6 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {/* USER SECTION */}
-      <div className="hidden md:flex items-center gap-4">
-        {user ? (
-          <>
-            <img
-              src={user.photoURL || "/default-avatar.png"}
-              alt="profile"
-              className="w-9 h-9 rounded-full object-cover border-2 border-white"
-            />
-
-            <span className="text-sm font-medium">
-              {user.displayName || "User"}
-            </span>
-
-            <button
-              onClick={handleLogout}
-              className="bg-red-500 px-3 py-1 rounded text-sm hover:bg-red-600"
-            >
-              Logout
-            </button>
-          </>
-        ) : (
-          <Link href="/login">
-            <button className="bg-yellow-500 px-4 py-2 rounded hover:bg-yellow-600">
-              Login
-            </button>
-          </Link>
-        )}
-      </div>
-
       {/* MOBILE BUTTON */}
       <button onClick={() => setOpen(true)} className="md:hidden text-2xl">
         ☰
@@ -123,32 +82,15 @@ export default function Navbar() {
                 <button onClick={() => setOpen(false)}>✕</button>
               </div>
 
-              {/* USER */}
-              {user && (
-                <div className="flex items-center gap-3 mb-6 border-b pb-4">
-                  <img
-                    src={user.photoURL || "/default-avatar.png"}
-                    className="w-10 h-10 rounded-full"
-                  />
-                  <span className="font-semibold">
-                    {user.displayName || "User"}
-                  </span>
-                </div>
-              )}
-
               {/* LINKS */}
               <ul className="space-y-6 text-lg">
 
                 <li>
-                  <Link href="/" onClick={() => setOpen(false)}>
-                    Home
-                  </Link>
+                  <Link href="/" onClick={() => setOpen(false)}>Home</Link>
                 </li>
 
                 <li>
-                  <Link href="/about" onClick={() => setOpen(false)}>
-                    About
-                  </Link>
+                  <Link href="/about" onClick={() => setOpen(false)}>About</Link>
                 </li>
 
                 {/* WHAT WE DO */}
@@ -211,28 +153,14 @@ export default function Navbar() {
                 </li>
 
                 <li>
-                  <Link href="/projects" onClick={() => setOpen(false)}>
-                    Projects
-                  </Link>
+                  <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
                 </li>
 
                 <li>
-                  <Link href="/contact" onClick={() => setOpen(false)}>
-                    Contact
-                  </Link>
+                  <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
                 </li>
 
               </ul>
-
-              {/* LOGOUT */}
-              {user && (
-                <button
-                  onClick={handleLogout}
-                  className="mt-auto bg-red-500 text-white py-3 rounded-lg"
-                >
-                  Logout
-                </button>
-              )}
 
             </motion.div>
           </>

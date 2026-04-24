@@ -31,7 +31,7 @@ export default function Contact() {
             <div className="mt-6 space-y-3 text-gray-700">
               <p><strong>Email:</strong> ............email needed</p>
               <p><strong>Phone:</strong> +447311487402 </p>
-              <p><strong>Location:</strong> United Kingdom & Global Outreach</p>
+              <p><strong> Address:</strong> 5 Brayford square LONDON E1 0SG</p>
             </div>
           </div>
 
