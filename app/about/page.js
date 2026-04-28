@@ -15,10 +15,10 @@ export default function About() {
           </h1>
 
           <p className="mt-6 text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Roodel Trust Foundation is a purpose-driven organisation committed to
+            Roodel Trust Foundation is a purpose-driven organisation dedicated to
             transforming lives and building sustainable communities across the UK,
-            Africa, and beyond. We focus on empowering individuals, supporting
-            vulnerable groups, and creating opportunities for long-term growth.
+            Africa, and beyond. We empower individuals, support
+            vulnerable groups, and create opportunities that lead to long-term growth and resilience.
           </p>
         </div>
 
@@ -38,16 +38,9 @@ export default function About() {
             </h2>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Roodel Trust Foundation was established with a clear vision — to
-              create a world where everyone, regardless of background, has access
-              to opportunities that allow them to thrive. Our journey began with
-              a passion for helping underserved communities and has grown into a
-              global mission impacting lives across different regions.
-            </p>
-
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Through collaboration, innovation, and dedication, we continue to
-              expand our reach and deliver meaningful change where it is needed most.
+              Roodel Trust Foundation was founded with a clear and compassionate vision: to
+              create a world where everyone has the opportunity to thrive. what began as a passion for uplifting underserved communities has grown into a global mission .
+              Through collaboration , innovation and unwavering dedication, we continue to expand or reach delivering meaningful, measurable change where it is needed.
             </p>
           </div>
 
@@ -57,7 +50,7 @@ export default function About() {
             </h2>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Our mission is to build confidence for a sustainable future by
+               To build confidence for a sustainable future by
               empowering individuals through education, improving access to
               healthcare, and supporting community-led development initiatives.
             </p>
@@ -67,10 +60,7 @@ export default function About() {
             </h2>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              We envision a world where every individual is given equal
-              opportunities to succeed, where communities are strengthened,
-              and where dignity, equality, and inclusion are at the centre
-              of development.
+              We envision a world where dignity, equality , and inclusion are at the heart of development , where every individual has the opportunity to succeed and every community is strengthened. 
             </p>
           </div>
 
@@ -100,7 +90,7 @@ export default function About() {
                 Compassion
               </h3>
               <p className="mt-3 text-gray-600">
-                We are driven by empathy and a deep commitment to improving lives.
+                Empathy drives our work. we are deeply committed to improving lives and uplifting communities.
               </p>
             </div>
 
@@ -109,7 +99,7 @@ export default function About() {
                 Sustainability
               </h3>
               <p className="mt-3 text-gray-600">
-                We focus on long-term solutions that create lasting impact.
+                We focus on long-term, community-driven that create lasting impact for generations .
               </p>
             </div>
 
@@ -117,7 +107,7 @@ export default function About() {
 
         </div>
 
-        {/* CALL TO ACTION */}
+        
         <div className="mt-20 text-center bg-green-900 text-white p-10 rounded-xl">
 
           <h2 className="text-3xl font-bold">
@@ -125,15 +115,15 @@ export default function About() {
           </h2>
 
           <p className="mt-4 max-w-2xl mx-auto">
-            Together, we can create a better future. Whether through volunteering,
-            partnerships, or donations, your support helps us continue our mission.
+            Together, we can build  a better future. Whether through volunteering,
+            partnerships, or donations, your support helps us continue our mission and expand our impact.
           </p>
 
           <a
             href="/contact"
             className="inline-block mt-6 bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600"
           >
-            Get Involved
+            Get Involved and be part of the change.
           </a>
 
         </div>

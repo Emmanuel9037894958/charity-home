@@ -70,7 +70,7 @@ export default function Footer() {
 
           <ul className="mt-4 space-y-2 text-gray-300 text-sm">
             <li className="hover:text-yellow-400 transition">Email: info@roodeltrust.org</li>
-            <li className="hover:text-yellow-400 transition">Phone: +44 123 456 7890</li>
+            <li className="hover:text-yellow-400 transition">Phone: +447311487402</li>
             <li className="hover:text-yellow-400 transition">Address: 5 Brayford square LONDON E1 0SG</li>
           </ul>
         </div>

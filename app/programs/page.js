@@ -1,9 +1,7 @@
 export default function Programs() {
   return (
     <div className="pt-35 px-4 pb-20">
-
       <div className="max-w-6xl mx-auto">
-
         {/* HEADER */}
         <div className="text-center">
           <p className="text-green-700 font-semibold uppercase tracking-wide">
@@ -15,16 +13,70 @@ export default function Programs() {
           </h1>
 
           <p className="mt-6 text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            At Roodel Trust Foundation, we implement sustainable, community-driven
-            programs designed to create long-term impact across education, healthcare,
-            and economic empowerment. Our initiatives are tailored to meet the needs
-            of diverse communities across the UK, Africa, and beyond.
+            At Roodel Trust Foundation, we deliver sustainable,
+            community-driven programs that create long-term impact across
+            education, healthcare, nutrition and economic empowerment. Our initiatives are
+            designed to meet the needs of diverse communities across the UK,
+            Africa, and beyond.
           </p>
         </div>
 
-        {/* EDUCATION */}
-        <section id="education" className="mt-20 grid md:grid-cols-2 gap-10 items-center">
+        {/* NUTRITION */}
+        <section
+          id="nutrition"
+          className="mt-20 grid md:grid-cols-2 gap-10 items-center"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80"
+            alt="nutrition"
+            className="w-full h-80 object-cover rounded-xl shadow-lg"
+          />
 
+          <div>
+            <h2 className="text-3xl font-bold text-green-900">
+              Healthy Eating & Nutrition Promotion
+            </h2>
+
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              Good nutrition is essential for long-term health, child
+              development, and community wellbeing.
+            </p>
+
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              We promote healthy eating habits by increasing awareness,
+              improving access to nutritious foods, and supporting families with
+              practical guidance.
+            </p>
+
+            <ul className="mt-4 space-y-2 text-gray-700">
+              <li>✔ Community workshops on balanced diets and food hygiene</li>
+              <li>✔ School-based nutrition education for children and teens</li>
+              <li>
+                ✔ Support for families on affordable healthy meal planning
+              </li>
+              <li>
+                ✔ Awareness campaigns on reducing sugar, salt, and processed
+                food
+              </li>
+              <li>✔ Promotion of local, fresh and culturally relevant foods</li>
+              <li>
+                ✔ Collaboration with farmers and marketers to improve access to
+                nutritious produce
+              </li>
+            </ul>
+
+            <p className="mt-4 text-gray-600">
+              Our aim is to help communities make informed food choices that
+              support lifelong health.
+            </p>
+          </div>
+        </section>
+
+        {/* EDUCATION */}
+        <section
+          id="education"
+          className="mt-20 grid md:grid-cols-2 gap-10 items-center"
+        >
           <img
             src="/social.jpg"
             alt="education"
@@ -39,9 +91,10 @@ export default function Programs() {
             <p className="mt-4 text-gray-700 leading-relaxed">
               We believe education is the foundation for a sustainable future.
               Our programs focus on improving access to quality education for
-              children and young people, particularly those from underserved
-              and vulnerable communities.
+              children and young people, especially those from underserved and
+              vulnerable communities.
             </p>
+            <p>Our work includes :</p>
 
             <ul className="mt-4 space-y-2 text-gray-700">
               <li>✔ Scholarships and financial support</li>
@@ -51,26 +104,29 @@ export default function Programs() {
             </ul>
 
             <p className="mt-4 text-gray-600">
-              Our goal is to empower the next generation with knowledge, confidence,
-              and opportunities to succeed globally.
+              Our goal is to empower the next generation with knowledge,
+              confidence, and opportunities to succeed globally.
             </p>
           </div>
-
         </section>
 
         {/* HEALTH */}
-        <section id="health" className="mt-20 grid md:grid-cols-2 gap-10 items-center">
-
+        <section
+          id="health"
+          className="mt-20 grid md:grid-cols-2 gap-10 items-center"
+        >
           <div>
             <h2 className="text-3xl font-bold text-green-900">
               Health & Wellbeing
             </h2>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Our health initiatives are designed to improve access to essential
-              healthcare services and promote overall wellbeing in communities.
-              We focus on preventive care, awareness, and direct medical support.
+              We design health initiatives that improve access to essential
+              healthcare services and promote overall wellbeing.
+              Our  focus is on preventive care, awareness, and direct medical
+              support.
             </p>
+            <p> Our initiatives includes :</p>
 
             <ul className="mt-4 space-y-2 text-gray-700">
               <li>✔ Community health outreach programs</li>
@@ -80,8 +136,7 @@ export default function Programs() {
             </ul>
 
             <p className="mt-4 text-gray-600">
-              Through partnerships and local engagement, we aim to create healthier,
-              more resilient communities worldwide.
+              Through partnerships and local engagement, we work to build healthier, more resilient communities.
             </p>
           </div>
 
@@ -90,13 +145,13 @@ export default function Programs() {
             alt="health"
             className="w-full h-80 object-cover rounded-xl shadow-lg"
           />
-
         </section>
 
         {/* SOCIAL ENTERPRISE */}
-        <section id="enterprise" className="mt-20 grid md:grid-cols-2 gap-10 items-center">
-
-
+        <section
+          id="enterprise"
+          className="mt-20 grid md:grid-cols-2 gap-10 items-center"
+        >
           <div>
             <h2 className="text-3xl font-bold text-green-900">
               Social Enterprise & Community Development
@@ -105,8 +160,8 @@ export default function Programs() {
             <p className="mt-4 text-gray-700 leading-relaxed">
               We support communities through sustainable economic empowerment
               initiatives that promote self-reliance and long-term development.
-              Our programs are designed to create opportunities and reduce poverty.
             </p>
+            <p>Our programs includes :</p>
 
             <ul className="mt-4 space-y-2 text-gray-700">
               <li>✔ Skills training and capacity building</li>
@@ -120,16 +175,14 @@ export default function Programs() {
               thrive, and sustain themselves independently.
             </p>
           </div>
+
           <img
             src="/community.jpg"
             alt="community"
             className="w-full h-80 object-cover rounded-xl shadow-lg"
           />
-
         </section>
-
       </div>
-
     </div>
   );
 }

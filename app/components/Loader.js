@@ -7,7 +7,7 @@ export default function Loader() {
       {/* SPINNER */}
       <div className="w-16 h-16 border-4 border-white border-t-yellow-400 rounded-full animate-spin"></div>
 
-      {/* TEXT */}
+      
       <h2 className="mt-6 text-xl font-semibold">
         Roodel Trust Foundation
       </h2>
