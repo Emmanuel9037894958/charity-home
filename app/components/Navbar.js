@@ -21,7 +21,6 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-green-900 text-white px-4 py-5 md:py-3 flex justify-between items-center z-50 shadow-xl h-20">
-
       {/* LOGO */}
       <Link href="/" className="flex items-center gap-3">
         <Image
@@ -75,7 +74,6 @@ export default function Navbar() {
               transition={{ duration: 0.4 }}
               className="fixed top-0 right-0 w-[85%] h-full bg-white text-black p-6 z-50 shadow-lg flex flex-col"
             >
-
               {/* TOP */}
               <div className="flex justify-between items-center mb-6">
                 <h2 className="font-bold text-lg text-green-900">Menu</h2>
@@ -84,15 +82,22 @@ export default function Navbar() {
 
               {/* LINKS */}
               <ul className="space-y-6 text-lg">
-
                 <li>
-                  <Link href="/" onClick={() => setOpen(false)}>Home</Link>
+                  <Link href="/" onClick={() => setOpen(false)}>
+                    Home
+                  </Link>
                 </li>
 
                 <li>
-                  <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+                  <Link href="/about" onClick={() => setOpen(false)}>
+                    About
+                  </Link>
                 </li>
-
+                <li>
+                  <Link href="/gallery" onClick={() => setOpen(false)}>
+                    Gallery
+                  </Link>
+                </li>
                 {/* WHAT WE DO */}
                 <li>
                   <div
@@ -107,17 +112,26 @@ export default function Navbar() {
                   {dropdown === "what" && (
                     <ul className="ml-4 mt-2 space-y-2 text-gray-600">
                       <li>
-                        <Link href="/programs#education" onClick={() => setOpen(false)}>
+                        <Link
+                          href="/programs#education"
+                          onClick={() => setOpen(false)}
+                        >
                           Education
                         </Link>
                       </li>
                       <li>
-                        <Link href="/programs#health" onClick={() => setOpen(false)}>
+                        <Link
+                          href="/programs#health"
+                          onClick={() => setOpen(false)}
+                        >
                           Health
                         </Link>
                       </li>
                       <li>
-                        <Link href="/programs#enterprise" onClick={() => setOpen(false)}>
+                        <Link
+                          href="/programs#enterprise"
+                          onClick={() => setOpen(false)}
+                        >
                           Social Enterprise
                         </Link>
                       </li>
@@ -153,20 +167,21 @@ export default function Navbar() {
                 </li>
 
                 <li>
-                  <Link href="/projects" onClick={() => setOpen(false)}>Projects</Link>
+                  <Link href="/projects" onClick={() => setOpen(false)}>
+                    Projects
+                  </Link>
                 </li>
 
                 <li>
-                  <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
+                  <Link href="/contact" onClick={() => setOpen(false)}>
+                    Contact
+                  </Link>
                 </li>
-
               </ul>
-
             </motion.div>
           </>
         )}
       </AnimatePresence>
-
     </nav>
   );
 }
